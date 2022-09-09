@@ -1,0 +1,34 @@
+{
+  // Configuration for JavaScript files
+  "extends": ["airbnb-base", "next/core-web-vitals", "plugin:prettier/recommended"],
+  "overrides": [
+    // Configuration for TypeScript files
+    {
+      "files": ["**/*.ts", "**/*.tsx"],
+      "plugins": ["@typescript-eslint", "tailwindcss", "unused-imports"],
+      "extends": [
+        "airbnb-typescript",
+        "plugin:prettier/recommended",
+        "plugin:tailwindcss/recommended"
+      ],
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "rules": {
+        "react/destructuring-assignment": "off",
+        "jsx-a11y/anchor-is-valid": "off",
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react-hooks/exhaustive-deps": "off",
+        "react/jsx-filename-extension": ["off"],
+        "@typescript-eslint/comma-dangle": "off",
+        "@typescript-eslint/no-unused-vars": "off",
+        "import/prefer-default-export": "off",
+        "import/extensions": ["off"],
+        "class-methods-use-this": "off",
+        "unused-imports/no-unused-imports": "warn",
+        "unused-imports/no-unused-vars": "warn"
+      }
+    }
+  ]
+}

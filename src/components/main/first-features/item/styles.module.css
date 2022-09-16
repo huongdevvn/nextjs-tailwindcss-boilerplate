@@ -1,0 +1,10 @@
+.item-active {
+  @apply relative rounded-r-none rounded-l-xl;
+  @apply bg-white/10 p-6 hover:bg-white/5;
+  @apply ring-1 ring-inset ring-white/10;
+}
+
+.item-inactive {
+  @apply relative rounded-r-none rounded-l-xl;
+  @apply p-6 hover:bg-white/5;
+}

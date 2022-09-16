@@ -1,0 +1,11 @@
+.nav-item {
+  @apply rounded-lg hover:bg-slate-100;
+  @apply text-sm text-slate-700;
+  @apply py-1 px-2;
+}
+
+.getting-started-today {
+  @apply rounded-full bg-blue-600  hover:bg-blue-500 active:bg-blue-800;
+  @apply text-sm font-semibold text-white hover:text-slate-100 active:text-blue-100;
+  @apply px-4 py-2;
+}

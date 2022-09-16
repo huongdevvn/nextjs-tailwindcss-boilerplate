@@ -1,0 +1,5 @@
+.nav-item {
+  @apply rounded-lg hover:bg-slate-100;
+  @apply text-sm text-slate-700;
+  @apply py-1 px-2;
+}

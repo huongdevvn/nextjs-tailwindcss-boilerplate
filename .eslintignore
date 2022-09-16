@@ -41,3 +41,4 @@ typings/
 .idea/
 
 build/
+next-env.d.ts

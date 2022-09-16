@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-  
+
     "lib": ["dom", "dom.iterable", "esnext"],
     "module": "esnext",
     "moduleResolution": "node",
@@ -23,6 +23,7 @@
     "allowUnreachableCode": false,
     "noFallthroughCasesInSwitch": true,
 
+    "typeRoots": ["./src/@types", "./node_modules/@types"],
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
@@ -40,6 +41,6 @@
       "@/public/*": ["./public/*"]
     }
   },
-  "exclude": ["./build/**/*", "./node_modules/**/*"],
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "exclude": ["./build/**/*", "./node_modules/**/*", "next-env.d.ts"],
+  "include": ["custom-next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }

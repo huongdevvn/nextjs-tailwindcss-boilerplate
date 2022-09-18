@@ -1,4 +1,5 @@
 import * as Tabs from '@radix-ui/react-tabs';
+import clsx from 'clsx';
 import Image from 'next/future/image';
 
 const data = [
@@ -48,20 +49,32 @@ const FirstFeaturesSection = () => {
         <Tabs.Root
           defaultValue="payroll"
           orientation="horizontal"
-          className="mt-16 rounded-xl bg-white/10 pt-10 ring-1 ring-inset ring-white/10"
+          className={clsx(
+            'mt-16 rounded-xl pt-10 lg:grid lg:grid-cols-12 lg:pt-0'
+            // 'bg-white/10 lg:bg-inherit',
+            // 'ring-1 ring-inset ring-white/10 lg:ring-0'
+          )}
         >
           <Tabs.List
-            aria-label="tabs list title"
-            className="flex justify-center gap-x-4 overflow-x-auto whitespace-nowrap pb-4"
+            aria-label="tabs list"
+            className="flex justify-start gap-x-4 overflow-x-auto whitespace-nowrap pb-4 sm:justify-center sm:pb-0 lg:col-span-5 lg:flex-col lg:whitespace-normal"
           >
             {data.map((item, index) => {
               return (
                 <Tabs.Trigger
-                  className="rounded-full py-1 px-4 font-display text-lg text-blue-100 radix-state-active:bg-white radix-state-active:text-blue-600"
+                  className={clsx(
+                    'z-10 rounded-full py-1 px-4 lg:rounded-r-none lg:rounded-l-xl lg:p-6',
+                    'font-display text-lg text-blue-100 lg:text-left lg:text-white',
+                    'radix-state-active:bg-white radix-state-active:text-blue-600 lg:hover:bg-white/5 lg:radix-state-active:bg-white/10 lg:radix-state-active:text-white',
+                    'lg:radix-state-active:ring-1 lg:radix-state-active:ring-inset lg:radix-state-active:ring-white/10'
+                  )}
                   key={index}
                   value={item.id}
                 >
-                  {item.title}
+                  <h3 className="font-display">{item.title}</h3>
+                  <p className="mt-2 hidden font-sans text-sm  lg:block lg:text-blue-100">
+                    {item.description}
+                  </p>
                 </Tabs.Trigger>
               );
             })}
@@ -70,12 +83,19 @@ const FirstFeaturesSection = () => {
             return (
               <Tabs.Content key={index} value={item.id} className="rounded-xl">
                 <div className="relative sm:px-6 lg:hidden">
+                  <div
+                    className={clsx(
+                      'absolute -inset-x-4 top-[-6.5rem] bottom-[-4.25rem] sm:rounded-t-xl md:-inset-x-0',
+                      'bg-white/10',
+                      'ring-1 ring-inset ring-white/10'
+                    )}
+                  ></div>
                   <p className="mx-auto mt-2 max-w-2xl text-base text-white sm:text-center">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-10 w-[45rem] sm:w-auto lg:w-[67.8125rem]">
+                <div className="mt-10 w-[45rem] sm:w-auto lg:col-span-7 lg:mt-0 lg:w-[67.8125rem]">
                   <Image
                     className="w-full rounded-xl shadow-xl shadow-blue-900/20"
                     alt={item.id}
@@ -89,31 +109,6 @@ const FirstFeaturesSection = () => {
             );
           })}
         </Tabs.Root>
-        {/* <div className="grid grid-cols-12 items-center pt-16">
-          <div className="col-span-5">
-            {data.map((item, index) => {
-              return (
-                <FirstFeatureItem
-                  key={index}
-                  title={item.title}
-                  description={item.description}
-                  active={index === activeIndex}
-                  onClick={setActiveIndex}
-                />
-              );
-            })}
-          </div>
-          <div className="col-span-7">
-            <div className="relative h-[45.6875rem] w-[67.8125rem] shadow-xl shadow-blue-900/20">
-              <Image
-                className="rounded-xl shadow-xl shadow-blue-900/20"
-                alt="payroll"
-                src="/assets/payroll.webp"
-                fill
-              ></Image>
-            </div>
-          </div>
-        </div> */}
       </div>
     </section>
   );

@@ -72,7 +72,7 @@ const FirstFeaturesSection = () => {
                   value={item.id}
                 >
                   <h3 className="font-display">{item.title}</h3>
-                  <p className="mt-2 hidden font-sans text-sm  lg:block lg:text-blue-100">
+                  <p className="mt-2 hidden font-sans text-sm lg:block lg:text-blue-100">
                     {item.description}
                   </p>
                 </Tabs.Trigger>

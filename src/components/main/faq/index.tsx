@@ -56,10 +56,10 @@ const faqDataCol3 = [
 
 const FAQSection = () => {
   return (
-    <section id="faq" className="bg-slate-50 py-32">
-      <div className=" mx-auto max-w-7xl px-8">
-        <div className="max-w-2xl">
-          <h2 className="font-display text-4xl tracking-tight text-slate-900">
+    <section id="faq" className="bg-slate-50 py-20 sm:py-32">
+      <div className=" mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:mx-0">
+          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Frequently asked questions
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
@@ -67,7 +67,7 @@ const FAQSection = () => {
             support team and if you&rsquo;re lucky someone will get back to you.
           </p>
         </div>
-        <ul className="mt-16 grid grid-cols-3 gap-8">
+        <ul className="mx-auto  mt-16 grid max-w-2xl grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
           <li>
             <ul className="flex flex-col gap-y-8">
               {faqDataCol1.map((item, index) => {

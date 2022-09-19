@@ -19,8 +19,8 @@ const PricingItem = ({
   return (
     <section
       className={clsx(
-        'rounded-3xl px-6 py-8 sm:px-8',
-        isRecommended && 'order-first bg-blue-600 lg:order-none'
+        'rounded-3xl px-6 sm:px-8 lg:py-8',
+        isRecommended && 'order-first bg-blue-600 py-8 lg:order-none '
       )}
     >
       <p className="font-display text-5xl font-light tracking-tight text-white">

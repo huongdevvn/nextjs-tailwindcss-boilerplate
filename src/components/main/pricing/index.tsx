@@ -21,6 +21,7 @@ const data = [
     benefits: [
       `Send 25 quotes and invoices`,
       `Connect up to 5 bank accounts`,
+      `Track up to 50 expenses per month`,
       `Automated payroll support`,
       `Export up to 12 reports`,
       `Bulk reconcile transactions`,
@@ -57,7 +58,7 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="-mx-4 mt-16 grid grid-cols-1 gap-x-8 sm:mx-auto sm:grid-cols-3">
+        <div className="-mx-4 mt-16 grid max-w-2xl grid-cols-1 gap-y-10 sm:mx-auto lg:-mx-8 lg:max-w-none lg:grid-cols-3">
           {data.map((item, index) => {
             return (
               <PricingItem

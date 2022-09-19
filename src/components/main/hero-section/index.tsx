@@ -1,22 +1,17 @@
-import LaravelCompanyIcon from 'public/assets/companies/laravel.svg';
-import MirageCompanyIcon from 'public/assets/companies/mirage.svg';
-import StatamicCompanyIcon from 'public/assets/companies/statamic.svg';
-import StaticKitCompanyIcon from 'public/assets/companies/static-kit.svg';
-import TransistorCompanyIcon from 'public/assets/companies/transistor.svg';
-import TupleCompanyIcon from 'public/assets/companies/tuple.svg';
+import Image from 'next/future/image';
 import MadeSimpleIcon from 'public/assets/made-simple.svg';
 import PlayVideoIcon from 'public/assets/play-video.svg';
 
 const companiesData1 = [
-  { name: 'Transistor', icon: <TransistorCompanyIcon /> },
-  { name: 'Tuple', icon: <TupleCompanyIcon /> },
-  { name: 'StaticKit', icon: <StaticKitCompanyIcon /> }
+  { name: 'Transistor', image: '/assets/companies/transistor.svg' },
+  { name: 'Tuple', image: '/assets/companies/tuple.svg' },
+  { name: 'StaticKit', image: '/assets/companies/static-kit.svg' }
 ];
 
 const companiesData2 = [
-  { name: 'Mirage', icon: <MirageCompanyIcon /> },
-  { name: 'Laravel', icon: <LaravelCompanyIcon /> },
-  { name: 'Statamic', icon: <StatamicCompanyIcon /> }
+  { name: 'Mirage', image: '/assets/companies/mirage.svg' },
+  { name: 'Laravel', image: '/assets/companies/laravel.svg' },
+  { name: 'Statamic', image: '/assets/companies/statamic.svg' }
 ];
 
 const HeroSection = () => {
@@ -56,18 +51,38 @@ const HeroSection = () => {
         <p className="font-display text-base text-slate-900">
           Trusted by these six companies so far
         </p>
-        <ul className="mt-8 flex justify-center gap-x-8 sm:flex-col sm:items-center sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0">
+        <ul className="mt-8 flex items-center justify-center gap-x-8 sm:flex-col sm:gap-y-10 xl:flex-row xl:gap-x-12 xl:gap-y-0">
           <li>
             <ul className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12 sm:gap-y-0">
               {companiesData1.map((companyItem, index) => {
-                return <li key={index}>{companyItem.icon}</li>;
+                return (
+                  <li className="flex" key={index}>
+                    <Image
+                      alt={companyItem.name}
+                      src={companyItem.image}
+                      width="0"
+                      height="0"
+                      className="h-auto w-full"
+                    ></Image>
+                  </li>
+                );
               })}
             </ul>
           </li>
           <li>
             <ul className="flex flex-col items-center gap-y-8 sm:flex-row sm:gap-x-12">
               {companiesData2.map((companyItem, index) => {
-                return <li key={index}>{companyItem.icon}</li>;
+                return (
+                  <li className="flex" key={index}>
+                    <Image
+                      alt={companyItem.name}
+                      src={companyItem.image}
+                      width="0"
+                      height="0"
+                      className="h-auto w-full"
+                    ></Image>
+                  </li>
+                );
               })}
             </ul>
           </li>

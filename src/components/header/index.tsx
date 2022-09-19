@@ -44,7 +44,7 @@ const Header = () => {
             <div className="md:hidden">
               <Popover.Root modal onOpenChange={setIsOpenPopperMenu}>
                 <Popover.Trigger>
-                  <div className="relative z-10 flex h-10 w-10 items-center justify-center ">
+                  <div className="relative z-10 flex h-10 w-10 items-center justify-center">
                     {isOpenPopperMenu ? (
                       <CloseIcon className="h-3.5 w-3.5 stroke-slate-700" />
                     ) : (
@@ -54,8 +54,8 @@ const Header = () => {
                 </Popover.Trigger>
 
                 <Popover.Portal>
-                  <div className="absolute inset-0 order-1 bg-slate-300/50">
-                    <Popover.Content className="w-screen px-4">
+                  <div className="fixed inset-0 order-1 bg-slate-300/50">
+                    <Popover.Content side="bottom" className="w-screen px-4">
                       <div className="mt-4 flex flex-col gap-y-2 rounded-2xl bg-white p-4 text-lg tracking-tight text-slate-900 shadow-xl ring-1 ring-slate-900/5">
                         <a href="#" className="p-2">
                           Features

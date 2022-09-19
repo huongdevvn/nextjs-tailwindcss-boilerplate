@@ -3,7 +3,7 @@ import FeaturesSection1 from './first-features';
 import GettingStartedSection from './getting-started';
 import HeroSection from './hero-section';
 import PricingSection from './pricing';
-import FeaturesSection2 from './second-features';
+import SecondaryFeatureSection from './second-features';
 import TestimonialsSection from './testimonials';
 
 const Main = () => {
@@ -11,7 +11,7 @@ const Main = () => {
     <main>
       <HeroSection />
       <FeaturesSection1 />
-      <FeaturesSection2 />
+      <SecondaryFeatureSection />
       <GettingStartedSection />
       <TestimonialsSection />
       <PricingSection />

@@ -47,10 +47,10 @@ const dataCol3 = [
 
 const TestimonialsSection = () => {
   return (
-    <section id="testimonials" className="bg-slate-50 py-32">
-      <div className="mx-auto max-w-7xl px-8">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="font-display text-4xl tracking-tight text-slate-900">
+    <section id="testimonials" className="bg-slate-50 py-20 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl md:text-center">
+          <h2 className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl">
             Loved by businesses worldwide.
           </h2>
           <p className="mt-4 text-lg tracking-tight text-slate-700">
@@ -60,9 +60,9 @@ const TestimonialsSection = () => {
           </p>
         </div>
 
-        <ul className="mx-auto mt-20 grid grid-cols-3 gap-8">
+        <ul className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-6 sm:gap-8 lg:max-w-none lg:grid-cols-3">
           <li>
-            <ul className="flex flex-col gap-y-8">
+            <ul className="flex flex-col gap-y-6 sm:gap-y-8">
               {dataCol1.map((item, index) => {
                 return (
                   <li key={index}>

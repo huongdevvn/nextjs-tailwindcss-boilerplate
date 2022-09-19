@@ -45,10 +45,10 @@ const data = [
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="bg-slate-900 py-32">
-      <div className="mx-auto max-w-7xl px-8">
-        <div className="text-center">
-          <h2 className="font-display text-4xl tracking-tight text-white">
+    <section id="pricing" className="bg-slate-900 py-20 sm:py-32">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="md:text-center">
+          <h2 className="font-display text-3xl tracking-tight text-white sm:text-4xl">
             Simple pricing, for everyone.
           </h2>
           <p className="mt-4 text-lg text-slate-400">
@@ -57,7 +57,7 @@ const PricingSection = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-16 grid grid-cols-3 gap-x-8">
+        <div className="-mx-4 mt-16 grid grid-cols-1 gap-x-8 sm:mx-auto sm:grid-cols-3">
           {data.map((item, index) => {
             return (
               <PricingItem

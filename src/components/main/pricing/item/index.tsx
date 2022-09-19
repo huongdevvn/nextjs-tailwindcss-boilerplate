@@ -18,7 +18,10 @@ const PricingItem = ({
 }: PricingItemProps) => {
   return (
     <section
-      className={clsx('rounded-3xl p-8', isRecommended && 'bg-blue-600')}
+      className={clsx(
+        'rounded-3xl px-6 py-8 sm:px-8',
+        isRecommended && 'order-first bg-blue-600 lg:order-none'
+      )}
     >
       <p className="font-display text-5xl font-light tracking-tight text-white">
         ${price}

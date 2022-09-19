@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 const Footer = () => {
   return (
     <footer className="bg-slate-50">
-      <div className="mx-auto max-w-7xl px-8">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="py-16">
           <Logo className="mx-auto h-10 w-auto" />
           <div className="mt-10 flex justify-center gap-x-6 text-sm">
@@ -21,8 +21,8 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        <div className="flex justify-between border-t border-slate-400/10 py-10">
-          <p className="text-sm text-slate-500">
+        <div className="flex flex-col-reverse items-center border-t border-slate-400/10 py-10 sm:flex-row sm:justify-between lg:justify-between">
+          <p className="mt-6 text-sm  text-slate-500 sm:mt-0">
             Copyright © 2022 TaxPal. All rights reserved.
           </p>
           <div className="flex gap-x-6">

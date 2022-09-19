@@ -1,5 +1,5 @@
 {
-  "name": "fe-01",
+  "name": "nextjs-tailwindcss-boilerplate",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,11 +10,15 @@
     "prettier": "prettier --write '**/*.{js,jsx,ts,tsx,json}'"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
     "next": "12.3.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "tailwindcss": "^3.1.8",
+    "tailwindcss-radix": "^2.6.0"
   },
   "devDependencies": {
+    "@svgr/webpack": "^6.3.1",
     "@trivago/prettier-plugin-sort-imports": "^3.3.0",
     "@types/node": "18.7.16",
     "@types/react": "18.0.18",
@@ -36,8 +40,9 @@
     "eslint-plugin-unused-imports": "^2.0.0",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.1.1",
     "prettier-plugin-tailwindcss": "^0.1.13",
-    "tailwindcss": "^3.1.8",
+    "svgo": "^2.8.0",
     "typescript": "4.8.3"
   }
 }
